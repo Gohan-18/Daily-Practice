@@ -1,5 +1,9 @@
 * {
-  padding: 0;
-  margin: 0;
+  padding: none;
+  margin: none;
   box-sizing: border-box;
+}
+
+a {
+  color: #33333300;
 }

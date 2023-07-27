@@ -1,6 +1,9 @@
-import { AppBar, Box, Button, Container, Typography } from "@mui/material";
+import { AppBar, Avatar, Box, Container, Typography } from "@mui/material";
 
 const Header = () => {
+
+  const user = null;
+
   return (
     <>
       <AppBar
@@ -29,48 +32,42 @@ const Header = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              gap: 2,
+              gap: 3,
             }}
           >
-            <Button
-              size="small"
+            <Typography
               sx={{
-                // bgcolor: "#333",
-                color: "#333",
-                px: "15px",
+                color: '#333',
+                fontWeight: 600,
+                fontSize: "16px",
+                cursor: 'pointer',
+                borderBottom: '3px solid #33333300',
+                transition: 'all 300ms',
                 "&:hover": {
-                  bgcolor: "#f4f4f4",
-                  // borderBottom: 
-                  // color: '#f4f4f4'
+                  borderBottom: '3px solid #333'
                 },
-                // "&::after": {
-                //   content: '""',
-                //   display: 'block',
-                //   bgcolor: '#333',
-                //   width: '100%',
-                //   height: '4px'
-                // }
+                // mr: '10px'
               }}
             >
               Docs
-            </Button>
-            <Button
-              size="small"
+            </Typography>
+            <Typography
               sx={{
-                bgcolor: "#333",
-                color: "#f4f4f4",
-                px: "15px",
+                color: '#333',
+                fontWeight: 600,
+                fontSize: "16px",
+                cursor: 'pointer',
+                borderBottom: '3px solid #33333300',
+                transition: 'all 300ms',
                 "&:hover": {
-                  bgcolor: "#333",
+                  borderBottom: '3px solid #333'
                 },
-                borderRadius: '10px',
-                border: '1px solid #333'
+                // mr: '10px'
               }}
             >
               Samples
-            </Button>
-            <Button
-              size="small"
+            </Typography>
+            <Typography
               sx={{
                 bgcolor: "#333",
                 color: "#f4f4f4",
@@ -79,11 +76,15 @@ const Header = () => {
                   bgcolor: "#333",
                 },
                 borderRadius: '10px',
-                border: '1px solid #333'
+                border: '1px solid #333',
+                cursor: 'pointer',
+                fontSize: "16px",
+                py: '4px'
               }}
             >
               Create your poster
-            </Button>
+            </Typography>
+            {user && <Avatar alt="Remy Sharp" src=""/>}
           </Box>
         </Container>
       </AppBar>
