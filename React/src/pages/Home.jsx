@@ -1,7 +1,10 @@
+import Header from "../components/MainLandingPage/Header"
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <Header/>
+    </>
   )
 }
 
